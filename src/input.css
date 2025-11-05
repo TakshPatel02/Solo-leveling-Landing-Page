@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Monument';
+    src: url(font/MonumentExtended-Regular.otf);
+    font-weight: normal;;
+}
+@font-face {
+    font-family: 'Monument';
+    src: url(font/MonumentExtended-Ultrabold.otf);
+    font-weight: bolder;;
+}
+
+@layer utilities{
+    .font-monument{
+        font-family: 'Monument' , sans-serif;
+        font-weight: inherit;
+    }
+}
