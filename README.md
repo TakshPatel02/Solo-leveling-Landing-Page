@@ -12,7 +12,7 @@ A clean, responsive static landing page inspired by the "Solo Leveling" aestheti
 
 ## Live site
 
-[Visit live site ↗](https://your-live-site-url.example)
+[Visit live site ↗](https://solo-leveling-landing-page-zeta.vercel.app/)
 
 ---
 
