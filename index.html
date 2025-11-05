@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="../src/output.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
-        html{
+        *{
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        html {
             scroll-behavior: smooth;
         }
+
         @keyframes scroll {
             0% {
                 transform: translateX(0);
@@ -25,6 +31,32 @@
         .animate-scroll {
             animation: scroll 5s linear infinite;
         }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 10s linear infinite;
+            will-change: transform;
+        }
+
+        body{
+            caret-color: transparent;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -36,11 +68,14 @@
         </div>
 
         <div class="flex text-3xl w-full justify-center items-center h-20 font-medium tracking-tighter leading-tight">
-            <h2 class="flex w-1/4 h-full justify-center items-center border-r-2 border-black"><a href="#scroll">Characters</a>
+            <h2 class="flex w-1/4 h-full justify-center items-center border-r-2 border-black"><a
+                    href="#scroll">Characters</a>
             </h2>
-            <h2 class="flex w-1/4 h-full justify-center items-center border-r-2 border-black"><a href="#">God Fight</a>
+            <h2 class="flex w-1/4 h-full justify-center items-center border-r-2 border-black"><a href="#page2">God
+                    Fight</a>
             </h2>
-            <h2 class="flex w-[30%] p-2 h-full justify-center items-center border-r-2 border-black"><a href="#">SHADOW'S
+            <h2 class="flex w-[30%] p-2 h-full justify-center items-center border-r-2 border-black"><a
+                    href="#page3">SHADOW'S
                     OF SUNG JIN WOO</a></h2>
         </div>
 
@@ -72,24 +107,39 @@
         </div>
         <div id="scroll" class="overflow-hidden w-full mt-20">
             <div class="flex animate-scroll">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://cdn.myanimelist.net/images/characters/8/531267.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://staticg.sportskeeda.com/editor/2024/01/71fce-17046817861688-1920.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/06/Frost-Monarch.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/2-Hwang-Dong-SU.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/3.-Go-Gun-Hee.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/4.-Yoo-Jin-Ho.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/5.-Akari-Shimizu.jpg" alt="">
-                
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://cdn.myanimelist.net/images/characters/8/531267.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://staticg.sportskeeda.com/editor/2024/01/71fce-17046817861688-1920.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/06/Frost-Monarch.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/2-Hwang-Dong-SU.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/3.-Go-Gun-Hee.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/4.-Yoo-Jin-Ho.jpg" alt="">
-                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square" src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/5.-Akari-Shimizu.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://cdn.myanimelist.net/images/characters/8/531267.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://staticg.sportskeeda.com/editor/2024/01/71fce-17046817861688-1920.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/06/Frost-Monarch.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/2-Hwang-Dong-SU.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/3.-Go-Gun-Hee.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/4.-Yoo-Jin-Ho.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/5.-Akari-Shimizu.jpg" alt="">
+
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://cdn.myanimelist.net/images/characters/8/531267.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://staticg.sportskeeda.com/editor/2024/01/71fce-17046817861688-1920.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/06/Frost-Monarch.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/2-Hwang-Dong-SU.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/3.-Go-Gun-Hee.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/4.-Yoo-Jin-Ho.jpg" alt="">
+                <img class="h-60 w-60 object-cover rounded-full mx-10 aspect-square"
+                    src="https://i0.wp.com/quotetheanime.com/wp-content/uploads/2021/07/5.-Akari-Shimizu.jpg" alt="">
             </div>
         </div>
-        <div id="alphabets" class="mt-8 border-y-2 flex my-auto justify-center items-center text-center gap-10 py-8 uppercase tracking-widest italic">
+        <div id="alphabets"
+            class="mt-8 border-y-2 flex my-auto justify-center items-center text-center gap-10 py-8 uppercase tracking-widest italic">
             <h5 class="text-3xl underline">Powers</h5>
             <h6 class="font-extralight ">Speed</h6>
             <h6 class="font-extralight ">Stealth</h6>
@@ -97,7 +147,110 @@
             <h6 class="font-extralight ">mana</h6>
             <h6 class="font-extralight ">Quicksilver</h6>
         </div>
+        <div id="page2" class="w-[90%] h-[80vh] mb-20 mx-auto flex flex-row gap-20 mt-20">
+            <div id="part1" class="h-[80vh] w-1/2">
+                <img src="https://images6.alphacoders.com/134/1347884.jpeg" class="h-[78vh] object-cover w-full" alt="">
+                <h5 class="font-monument text-4xl">Statue of god</h5>
+            </div>
+            <div id="part2" class="h-[80vh] w-1/2">
+                <img src="https://images8.alphacoders.com/135/1350926.jpeg" class="h-[60vh] object-cover w-full" alt="">
+                <div id="text" class="flex flex-row mt-4">
+                    <h5 class="w-1/2 flex justify-start items-center text-4xl text-center font-monument">Sung Jin Woo VS
+                        God</h5>
+                    <p class="w-1/2 font-mono text-md font-medium">Sung Jin Woo, a formidable protagonist in the
+                        <b>"Solo Leveling"</b> web novel, faces a transcendent challenge against a divine entity.
+                        Their epic clash unfolds in a breathtaking confrontation, blending supernatural prowess and
+                        intense narrative tension.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="page3" class="mt-40 mx-auto w-[90%] flex flex-col justify-center items-center">
+            <h1 class="font-monument text-5xl uppercase mb-14">Shadow's of sung jin Woo</h1>
+            <div id="elems" class="flex flex-row border-t-2 w-full items-center">
+                <h4 class="font-monument text-2xl w-1/4">01</h4>
+                <div class="image w-1/4">
+                    <img class="w-30 h-30 rounded-full object-cover "
+                        src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/solo-leveling-grand-marshal-bellion.jpg?q=50&fit=contain&w=750&h=415&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="text flex flex-col justify-center items-start ml-10 w-2/4">
+                    <h1 class="text-3xl font-medium">Bellion</h1>
+                    <h5 class="text-md uppercase">The stroungest shadow in jinwoo's army</h5>
+                </div>
+            </div>
+            <div id="elems" class="flex flex-row border-t-2 w-full items-center">
+                <h4 class="font-monument text-2xl w-1/4">02</h4>
+                <div class="image w-1/4">
+                    <img class="w-30 h-30 rounded-full object-cover "
+                        src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/12/solo-leveling-beru.jpg?q=50&fit=crop&w=750&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="text flex flex-col justify-center items-start ml-10 w-2/4">
+                    <h1 class="text-3xl font-medium">Beru</h1>
+                    <h5 class="text-md uppercase">Sung Jinwoo's Right-hand Man</h5>
+                </div>
+            </div>
+            <div id="elems" class="flex flex-row border-t-2 w-full items-center">
+                <h4 class="font-monument text-2xl w-1/4">03</h4>
+                <div class="image w-1/4">
+                    <img class="w-30 h-30 rounded-full object-cover "
+                        src="https://w0.peakpx.com/wallpaper/356/538/HD-wallpaper-igris-sololeveling-shadow-webtoon-solo-chahaein-sung-jin-woo.jpg"
+                        alt="">
+                </div>
+                <div class="text flex flex-col justify-center items-start ml-10 w-2/4">
+                    <h1 class="text-3xl font-medium">Igris</h1>
+                    <h5 class="text-md uppercase">Shadow Monarch's Army Commander</h5>
+                </div>
+            </div>
+            <div id="elems" class="flex flex-row border-t-2 w-full items-center">
+                <h4 class="font-monument text-2xl w-1/4">04</h4>
+                <div class="image w-1/4">
+                    <img class="w-30 h-30 rounded-full object-cover "
+                        src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/01/solo-leveling-kamish.jpg?q=50&fit=crop&w=750&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="text flex flex-col justify-center items-start ml-10 w-2/4">
+                    <h1 class="text-3xl font-medium">Kamish</h1>
+                    <h5 class="text-md uppercase">Humanity's Greatest Calamity</h5>
+                </div>
+            </div>
+            <div id="elems" class="flex flex-row border-t-2 border-b-2 w-full items-center">
+                <h4 class="font-monument text-2xl w-1/4">05</h4>
+                <div class="image w-1/4">
+                    <img class="w-30 h-30 rounded-full object-cover "
+                        src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/01/solo-leveling-greed.jpg?q=50&fit=crop&w=750&dpr=1.5"
+                        alt="">
+                </div>
+                <div class="text flex flex-col justify-center items-start ml-10 w-2/4">
+                    <h1 class="text-3xl font-medium">Greed</h1>
+                    <h5 class="text-md uppercase">Shadow Monarch's Army General</h5>
+                </div>
+            </div>
+        </div>
+        <div id="marque" class="mt-20  overflow-x-hidden py-10 border-y-2 w-full whitespace-nowrap">
+            <div class="animate-marquee inline-block">
+                <div class="flex">
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                </div>
+                <div class="flex" aria-hidden="true">
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                    <h1 class="inline-block font-monument uppercase text-4xl mx-10">Solo Leveling</h1>
+                </div>
+            </div>
+
+        </div>
     </header>
+    <footer class="mt-5 text-center text-xl mb-5 font-monument">
+        <h3>Made with ❤️ Taksh Patel <i class="ri-arrow-right-up-long-line"></i></h3>
+    </footer>
 </body>
 
 </html>
